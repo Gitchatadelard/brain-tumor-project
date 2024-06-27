@@ -85,7 +85,7 @@ def PageSpecifications():
 
 
     def predict(image):
-        model = "model.tflite"
+        model = "brain_tumour_app/model"
         interpreter = tf.lite.Interpreter(model_path = model)
         interpreter.allocate_tensors()
         input_details = interpreter.get_input_details()

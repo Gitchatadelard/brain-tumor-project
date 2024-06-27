@@ -85,7 +85,7 @@ def PageSpecifications():
 
 
     def predict(image):
-        model = "./bt2/model/model.tflite"
+        model = "./model/model.tflite"
         interpreter = tf.lite.Interpreter(model_path = model)
         interpreter.allocate_tensors()
         input_details = interpreter.get_input_details()

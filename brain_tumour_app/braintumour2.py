@@ -75,7 +75,12 @@ def PageSpecifications():
                         st.error(f"An error occurred: {e}")
 
     def predict(image):
-        model_path = "./model/model.tflite"
+        # Print the current working directory
+        st.write(f"Current working directory: {os.getcwd()}")
+        
+        # Convert the relative path to an absolute path
+        model_path = os.path.join(os.getcwd(), "model/model.tflite")
+        st.write(f"Model path: {model_path}")
         
         # Check if model file exists
         if not os.path.exists(model_path):
